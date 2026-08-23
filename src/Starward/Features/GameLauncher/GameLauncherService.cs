@@ -337,7 +337,7 @@ internal partial class GameLauncherService
                 if (File.Exists(exe))
                 {
                     thirdPartyTool = true;
-                    verb = Path.GetExtension(exe) is ".exe" or ".bat" ? "runas" : "";
+                    verb = "";
                 }
                 else
                 {
@@ -351,7 +351,7 @@ internal partial class GameLauncherService
                 var folder = GetGameInstallPath(gameId);
                 var name = await GetGameExeNameAsync(gameId);
                 exe = Path.Join(folder, name);
-                verb = "runas";
+                verb = "";
                 if (!File.Exists(exe))
                 {
                     _logger.LogWarning("Game exe not found: {path}", exe);
