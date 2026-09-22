@@ -55,11 +55,11 @@ public static class RpcRunner
         }
 
 
-        if (!AppConfig.IsAdmin)
-        {
-            Log.Error("Start without administrator, exit process!");
-            return;
-        }
+        // if (!AppConfig.IsAdmin)
+        // {
+        //     Log.Error("Start without administrator, exit process!");
+        //     return;
+        // }
 
         if (args.Length > 2 && int.TryParse(args[2], out int processId))
         {
