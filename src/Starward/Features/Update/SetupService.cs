@@ -134,7 +134,7 @@ internal class SetupService
         {
             FileName = setupPath,
             UseShellExecute = true,
-            Verb = "runas",
+            Verb = "",
             Arguments = $"""
                 update --InstallFolder "{AppContext.BaseDirectory.TrimEnd('\\')}" --OldVersion "{AppConfig.AppVersion}" --NewVersion "{detail.Version}" --Preview "{AppConfig.EnablePreviewRelease}" --pid {Environment.ProcessId}
                 """,

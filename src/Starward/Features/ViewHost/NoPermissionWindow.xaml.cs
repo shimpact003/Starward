@@ -75,7 +75,7 @@ public sealed partial class NoPermissionWindow : WindowEx
             {
                 FileName = Environment.ProcessPath,
                 UseShellExecute = true,
-                Verb = "runas",
+                Verb = "",
             };
             foreach (string? item in Environment.GetCommandLineArgs().Skip(1))
             {

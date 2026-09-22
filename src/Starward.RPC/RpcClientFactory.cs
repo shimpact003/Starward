@@ -33,7 +33,7 @@ public static class RpcClientFactory
             process = Process.Start(new ProcessStartInfo
             {
                 FileName = name,
-                Verb = "runas",
+                Verb = "",
                 UseShellExecute = true,
                 CreateNoWindow = true,
                 Arguments = $"{AppConfig.StartupMagic} {Environment.ProcessId}",

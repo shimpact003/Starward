@@ -58,7 +58,7 @@ internal class RpcService
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = AppConfig.StarwardExecutePath,
-                    Verb = "runas",
+                    Verb = "",
                     UseShellExecute = true,
                     CreateNoWindow = true,
                     Arguments = $"rpc {RpcClientFactory.StartupMagic} {Environment.ProcessId}",
